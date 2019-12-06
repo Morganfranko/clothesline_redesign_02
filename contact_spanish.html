@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clothesline Laundromat</title>
+    <link rel="shortcut icon" href="favicon.ico?"/>
+</head>
+<style>
+
+    * {
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: #E2F6FF;
+    }
+
+    .wrapper {
+        width: 1180px;
+        height: 1000px;
+        background: white;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    header {
+        width: 1180px;
+        height: 300px;
+        position: relative;
+    }
+
+    .logo {
+        position: absolute;
+        width: 840px;
+        height: 100px;
+        left: 180px;
+        top: 20px;
+    }
+
+    nav {
+        width: 1180px;
+        height: 72px;
+        position: absolute;
+        top: 150px;
+        background-color: #95c0d3;
+        margin: 0 auto;
+    }
+
+    .languages {
+        font-family: Avenir;
+        font-style: bold;
+        font-size: 20px;
+        color: black;
+        width: 1100px;
+        height: 300px;
+        position: absolute;
+        top: 190px;
+        left: 1025px;
+    }
+
+    a.t2 {
+        font-family: Arial Black;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 30px;
+        line-height: 48px;
+        text-align: center;
+        text-decoration: none;
+        padding-left: 232px;
+        padding-right: 35px;
+        color: #ffffff;
+    }
+
+    a.t3 {
+        font-family: Arial Black;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 30px;
+        line-height: 48px;
+        text-align: center;
+        text-decoration: none;
+        padding-right: 35px;
+        color: #ffffff;
+    }
+
+    a.t4 {
+        font-family: Arial Black;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 30px;
+        line-height: 48px;
+        text-align: center;
+        text-decoration: none;
+        padding-right: 35px;
+        color: #ffffff;
+        left: 30px;
+    }
+
+    a.t5 {
+        font-family: Arial Black;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 30px;
+        line-height: 48px;
+        text-align: center;
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    a:link {
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    a:visited {
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: #E2F6FF;
+    }
+
+    input[type=text], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type=submit] {
+        width: 100%;
+        background-color: #000000;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+        background-color: #95c0d3;
+    }
+
+    .form {
+        max-width: 1000px;
+        position: absolute;
+        margin-left: 85px;
+        font-family: Arial Black;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 17px;
+        background-color: #E4EFF4;
+        margin-top: 60px;
+        padding: 20px;
+    }
+
+    .contact {
+        position: absolute;
+        Font-Family: Arial Black;
+        Font-Style: normal;
+        Font-Size: 30px;
+        color: white;
+        padding-left: 15px;
+        background-color: black;
+        width: 1000px;
+        height: 74px;
+        margin-left: 85px;
+        margin-top: -14px;
+    }
+
+    .phone {
+        position: absolute;
+        Font-Family: Arial Black;
+        Font-Style: normal;
+        Font-Size: 20px;
+        color: white;
+        padding-left: 100px;
+        padding-top: 20px;
+    }
+
+</style>
+<body>
+<div class="wrapper">
+
+    <header>
+        <div class="logo">
+            <img src="clothesline_logo.png" height="100" width="840"/>
+        </div>
+        <nav>
+            <a class="t2" href="home_spanish.html">Inicio</a>
+            <a class="t3" href="amenities_spanish.html">Omodidades</a>
+            <a class="t4" href="location_spanish.html">Ubicación</a>
+            <a class="t5" href="contact_spanish.html">Contacto</a>
+        </nav>
+    </header>
+
+    <h2 class="contact">Contacto</h2>
+    <h2 class="phone"> 651-925-6611</h2>
+
+    <div class="form">
+        <form action="/action_page.php">
+            <label for="fname">Primer Nombre</label>
+            <input type="text" id="fname" name="firstname">
+
+            <label for="lname">Apellido</label>
+            <input type="text" id="lname" name="lastname">
+
+            <label for="email">Dirección de Correo Electrónico</label>
+            <input type="text" id="email" name="email">
+
+            <label for="subject">Tema</label>
+            <input type="text" id="subject" name="subject">
+
+            <label for="message">Aviso</label>
+            <input type="text" id="message" name="message">
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+<div class="languages">
+    <a class="english" href="home_page-2.html">English</a>
+    <a class="spanish" href="home_page-2.html">Español</a>
+</div>
+</div>
+
+</div><!-- END OF WRAPPER -->
+
+</body>
+</html>

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clothesline Laundromat</title>
+    <link rel="shortcut icon" href="favicon.ico?"/>
+</head>
+<style>
+
+    * {
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: #E2F6FF;
+    }
+
+    .wrapper {
+        width: 1180px;
+        height: 1000px;
+        background: white;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    header {
+        width: 1180px;
+        height: 300px;
+        position: relative;
+    }
+
+    .logo {
+        position: absolute;
+        width: 840px;
+        height: 100px;
+        left: 180px;
+        top: 20px;
+    }
+
+    nav {
+        width: 1180px;
+        height: 72px;
+        position: absolute;
+        top: 150px;
+        background-color: #95C0D3;
+        margin: 0 auto;
+    }
+
+    .t2 {
+        font-family: Arial Black;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 22px;
+        text-align: center;
+        color: #000000;
+    }
+
+    a.t2 {
+        font-family: Arial Black;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 30px;
+        line-height: 48px;
+        text-align: center;
+        text-decoration: none;
+        padding-left: 270px;
+        padding-right: 35px;
+        color: #ffffff;
+    }
+
+    a.t3 {
+        font-family: Arial Black;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 30px;
+        line-height: 48px;
+        text-align: center;
+        text-decoration: none;
+        padding-right: 35px;
+        color: #ffffff;
+    }
+
+    a.t4 {
+        font-family: Arial Black;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 30px;
+        line-height: 48px;
+        text-align: center;
+        text-decoration: none;
+        padding-right: 35px;
+        color: #ffffff;
+        left: 30px;
+    }
+
+    a.t5 {
+        font-family: Arial Black;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 30px;
+        line-height: 48px;
+        text-align: center;
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    a:link {
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    a:visited {
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: #E2F6FF;
+    }
+
+    .welcome-header {
+        position: absolute;
+        font-family: Arial Black;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 22px;
+        padding-left: 858px;
+        top: -505px;
+    }
+
+    .languages {
+        font-family: Avenir;
+        font-style: bold;
+        font-size: 20px;
+        color: black;
+        width: 1100px;
+        height: 300px;
+        position: absolute;
+        top: 190px;
+        left: 1025px;
+    }
+
+    #p1 {
+        position: absolute;
+        font-family: Avenir;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: left;
+        width: 232px;
+        height: 224px;
+        left: 848px;
+        top: -516px;
+        padding-top: 90px;
+        padding-left: 10px;
+        background-color: rgba(149, 192, 211, 0.25)
+    }
+
+    .hours {
+        position: absolute;
+        font-family: Arial Black;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 22px;
+        padding-left: 858px;
+        top: 550px;
+    }
+
+    #p2 {
+        position: absolute;
+        width: 250px;
+        height: 103px;
+        left: 848px;
+        top: 545px;
+        font-family: Avenir;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        text-align: left;
+        color: #000000;
+        width: 232px;
+        height: 103px;
+        padding-top: 45px;
+        padding-left: 10px;
+        background-color: rgba(149, 192, 211, 0.25);
+    }
+
+    .location {
+        position: absolute;
+        font-family: Arial Black;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 22px;
+        padding-left: 858px;
+        top: 674px;
+    }
+
+    #p3 {
+        position: absolute;
+        width: 232px;
+        height: 105px;
+        left: 848px;
+        top: 669px;
+        font-family: Avenir;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        text-align: left;
+        padding-top: 45px;
+        padding-left: 10px;
+        background-color: rgba(149, 192, 211, 0.25);
+    }
+
+    .paragraph-01 {
+        position: relative;
+    }
+
+    /*THIS IS THE SLIDESHOW CSS*/
+    .slideshow-container {
+        max-width: 731px;
+        position: relative;
+        margin-left: 100px;
+    }
+
+    /* Hide the images by default */
+    .mySlides {
+        display: none;
+    }
+
+    /* Next & previous buttons */
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 14px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Number text (1/8 etc) */
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 20px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .dot:hover {
+        background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+        from {
+            opacity: .4
+        }
+        to {
+            opacity: 1
+        }
+    }
+
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+        to {
+            opacity: 1
+        }
+    }
+
+    /*THIS IS THE END OF SLIDESHOW CSS*/
+
+</style>
+<body>
+<div class="wrapper">
+
+    <header>
+        <div class="logo">
+            <img src="clothesline_logo.png" height="100" width="840"/>
+        </div>
+        <nav>
+            <a class="t2" href="home-02.html">Home</a>
+            <a class="t3" href="amenities.html">Amenities</a>
+            <a class="t4" href="location.html">Location</a>
+            <a class="t5" href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number -->
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 8</div>
+            <img src="06.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 8</div>
+            <img src="08.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 8</div>
+            <img src="03.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 8</div>
+            <img src="04.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">5 / 8</div>
+            <img src="05.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">6 / 8</div>
+            <img src="02.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">7 / 8</div>
+            <img src="07.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">8 / 8</div>
+            <img src="01.jpg" style="width:100%">
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+        </div>
+    </div>
+
+    <div class="main"></div>
+
+    <div class="rightcol">
+        <div class="paragraph-01">
+            <h1 class="welcome-header">Welcome To <br> Clothesline</h1>
+            <p id="p1">Clothesline is located in West St. Paul.
+                We have large capacity washers and dryers to meet your washing needs.
+                Our space is clean, safe, and offers various services which can be
+                read about on the amenities page.</p>
+        </div>
+
+        <div class="paragraph-02">
+            <h1 class="hours">Hours</h1>
+            <p id="p2">6:00 AM - 11:00 PM <br> Open Everyday</p>
+        </div>
+
+        <div class="paragraph-03">
+            <h1 class="location">Location</h1>
+            <p id="p3">1838 Oakdale Ave West<br> St. Paul, MN 55118</p>
+        </div>
+    </div>
+
+    <div class="languages">
+        <a class="english" href="home_page-2.html">English</a>
+        <a class="spanish" href="home_page-2.html">Español</a>
+    </div>
+
+</div><!-- END OF WRAPPER -->
+
+<script>
+    $(document).ready(function () {
+// Add smooth scrolling to all links
+        $("a").on('click', function (event) {
+
+// Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+// Prevent default anchor click behavior
+                event.preventDefault();
+
+// Store hash
+                var hash = this.hash;
+
+// Using jQuery's animate() method to add smooth page scroll
+// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function () {
+
+// Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            } // End if
+        });
+    });
+
+</script>
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+</script>
+</body>
+</html>
